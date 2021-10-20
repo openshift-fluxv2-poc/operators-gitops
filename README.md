@@ -1,10 +1,10 @@
-# Managing OpenShift Operators - the GitOps way
+# Managing OpenShift Operators - a GitOps way
 
 This repo demonstates how to manage OpenShift Operators the GitOps way using Flux.
 
 ## Problem
 
-You were a platform engineer. You used OpenShift managed clusters. You had a long list of OpenShift Operators, and you installed them manually by clicking. Your OpenShift cluster worked happily. Then, you broke something. The cluster was falling apart. You deleted the old cluster, and created a new one, but you forget that long list of Operators you had installed.
+You were a platform engineer. You used OpenShift managed clusters. You had a long list of OpenShift Operators, and you installed them manually by clicking. Your OpenShift cluster worked happily. Then, you broke something. The cluster was falling apart. You deleted the old cluster, and created a new one, but you forgot that long list of Operators you had installed.
 
 ## Solution
 
