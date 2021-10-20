@@ -2,13 +2,26 @@
 
 This repo demonstates how to manage OpenShift Operators the GitOps way using Flux.
 
-# Problem
+## Problem
 
-You were a platform engineer. You had a long list of Operators. You installed them by clicking. Your OpenShift cluster worked happily.
-You broke something. The cluster was falling apart. You forget that long list of Operators you installed.
-You can use GitOps to backup and document them. Here's how.
+You were a platform engineer. You used OpenShift managed clusters. You had a long list of OpenShift Operators, and you installed them manually by clicking. Your OpenShift cluster worked happily. Then, you broke something. The cluster was falling apart. You deleted the old cluster, and created a new one, but you forget that long list of Operators you had installed.
 
-Here's the bootstrapping YAML snippets,
+## Solutions
+
+You can use GitOps to backup and document your OpenShift Operators. You could also share them to your team. Here's how.
+
+  1. Your OpenShift Operator is an artifact. Create `_artifacts` directory, and create a directory for each of your OpenShift Operator. For example, `010-flux` for the Flux Operator, `020-gatekeeper` for the Gatekeeper Operator.
+  2. Put YAML files of your OpenShift Operator under its directory. For example, `010-flux/flux.yaml`, and `020-gatekeeper/gatekeeper.yaml`. Each directory may contain multiple YAML files.
+  3. Wrap each set of artifacts as a Flux's Kustomization object. We call it a feature. Put each feature YAML under `_features` directory.
+
+## Bootstrap via YAML Import
+
+A nice thing is that you can document a bootstrapping YAML on how to get all of your Operators back online for new clusters inside a Markdown doc like the following. Next time, you or your team members could just:
+
+  1. Create a new cluster
+  2. Install Flux Operator on the new cluster
+  3. Copy and paste YAML snippets and import them into your cluster
+  
 ```yaml
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta1
