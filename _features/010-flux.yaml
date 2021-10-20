@@ -11,5 +11,5 @@ spec:
   prune: true
   force: false
   sourceRef:
-    name: flux-system
+    name: 000-root
     kind: GitRepository
