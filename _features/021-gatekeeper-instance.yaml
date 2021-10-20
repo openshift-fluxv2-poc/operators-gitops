@@ -14,7 +14,7 @@ spec:
     name: 000-root
     kind: GitRepository
   dependsOn:
-  - name: policy-engine-operator
+  - name: 020-gatekeeper
   healthChecks:
   - apiVersion: apps/v1
     kind: Deployment
