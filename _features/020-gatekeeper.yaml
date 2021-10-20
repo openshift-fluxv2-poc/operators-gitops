@@ -2,11 +2,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: 000-flux
+  name: 020-gatekeeper
   namespace: flux-system
 spec:
   timeout: 2m
-  path: ./_artifacts/000-flux
+  path: ./_artifacts/020-gatekeeper
   interval: 5m
   prune: true
   force: false

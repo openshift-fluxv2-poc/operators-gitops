@@ -15,5 +15,5 @@ commonLabels:
 # Feature Toggles
 #
 resources:
-- ../_features/000-flux.yaml
-- ../_features/010-gatekeeper.yaml
+- ../_features/010-flux.yaml
+- ../_features/020-gatekeeper.yaml

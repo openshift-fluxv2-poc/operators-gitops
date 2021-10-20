@@ -2,12 +2,12 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: root
+  name: 000-root
   namespace: flux-system
 spec:
   timeout: 20s
   gitImplementation: libgit2
-  interval: 1m
+  interval: 5m
   # If you fork, please change this repo URL to match the forked one.
   url: 'https://github.com/openshift-fluxv2-poc/operators-gitops'
   ref:
@@ -16,7 +16,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: root
+  name: 000-root
   namespace: flux-system
 spec:
   timeout: 2m
@@ -25,5 +25,6 @@ spec:
   prune: true
   force: false
   sourceRef:
-    name: root
+    name: 000-root
     kind: GitRepository
+
