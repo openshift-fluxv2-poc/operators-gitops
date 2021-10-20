@@ -1,0 +1,19 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  labels:
+    cluster: c010-openshift-cluster
+    operation-layer: platform-ops
+#
+# Label for grouping
+#
+commonLabels:
+  platform-ops: "true"
+
+#
+# Feature Toggles
+#
+resources:
+- ../_features/000-flux.yaml
+- ../_features/010-gatekeeper.yaml
