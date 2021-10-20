@@ -14,7 +14,7 @@ You can use GitOps to backup and document your OpenShift Operators. You could al
   2. Put YAML files of your OpenShift Operator under its directory. For example, `010-flux/flux.yaml`, and `020-gatekeeper/gatekeeper.yaml`. Each directory may contain multiple YAML files.
   3. Wrap each set of artifacts as a Flux's Kustomization object. We call it a feature. Put each feature YAML under `_features` directory.
   4. Create a cluster directory, in this example `c010-openshift-cluster`. Then create a `kustomization.yaml`, and put all features you'd like to have for your cluster as resources, like [this](https://github.com/openshift-fluxv2-poc/operators-gitops/blob/main/c010-openshift-cluster/kustomization.yaml).
-  5. Put the following [YAML snippets]() into `root-sync.yaml` to make everything self-contained and automated after bootstrapping.
+  5. Put the following [YAML snippets](https://github.com/openshift-fluxv2-poc/operators-gitops/blob/main/README.md?plain=1#L29) into `root-sync.yaml` like [this](https://github.com/openshift-fluxv2-poc/operators-gitops/blob/main/c010-openshift-cluster/root-sync.yaml) to make everything self-contained and automated after bootstrapping. If you change the bootstrap snippets below, please don't forget to update `root-sync.yaml`.
   6. You are now ready.
 
 ## Bootstrap via YAML Import
