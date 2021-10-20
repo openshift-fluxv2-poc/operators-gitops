@@ -6,7 +6,7 @@ This repo demonstates how to manage OpenShift Operators the GitOps way using Flu
 
 You were a platform engineer. You used OpenShift managed clusters. You had a long list of OpenShift Operators, and you installed them manually by clicking. Your OpenShift cluster worked happily. Then, you broke something. The cluster was falling apart. You deleted the old cluster, and created a new one, but you forget that long list of Operators you had installed.
 
-## Solutions
+## Solution
 
 You can use GitOps to backup and document your OpenShift Operators. You could also share them to your team. Here's how.
 
@@ -53,3 +53,5 @@ spec:
     name: 000-root
     kind: GitRepository
 ```
+
+After bootstrapping, the Flux Operator itself will be also managed by GitOps config from this repository.
