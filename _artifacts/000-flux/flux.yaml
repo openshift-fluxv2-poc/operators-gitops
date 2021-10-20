@@ -1,4 +1,12 @@
 ---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  generateName: flux-system-
+  name: flux-system-2lpqj
+  namespace: flux-system
+spec: {}
+---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
@@ -13,4 +21,3 @@ spec:
   source: community-operators
   sourceNamespace: openshift-marketplace
   startingCSV: flux.v0.18.3
----
