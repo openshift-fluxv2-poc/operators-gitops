@@ -13,3 +13,8 @@ spec:
   sourceRef:
     name: 000-root
     kind: GitRepository
+  healthChecks:
+  - apiVersion: apps/v1
+    kind: Deployment
+    name: gatekeeper-operator-controller
+    namespace: openshift-operators

@@ -4,7 +4,7 @@ kind: Kustomization
 metadata:
   labels:
     cluster: c010-openshift-cluster
-    operation-layer: platform-ops
+    operation-level: platform-ops
 #
 # Label for grouping
 #
@@ -17,3 +17,4 @@ commonLabels:
 resources:
 - ../_features/010-flux.yaml
 - ../_features/020-gatekeeper.yaml
+- ../_features/021-gatekeeper-instance.yaml
