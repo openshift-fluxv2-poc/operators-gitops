@@ -54,4 +54,8 @@ spec:
     kind: GitRepository
 ```
 
-After bootstrapping, the Flux Operator itself will be also managed by GitOps config from this repository.
+After bootstrapping, the Flux Operator itself will be also managed by GitOps config from this repository. You could check the labels under the Subscription tab of each Operator to see if it's already managed by Flux and GitOps.
+
+![image](https://user-images.githubusercontent.com/10666/138084572-56e3a46c-fc7d-4d78-8361-8ea2411d3275.png)
+![image](https://user-images.githubusercontent.com/10666/138084621-ed766b7a-b885-4ced-9095-0a3c06f122e9.png)
+
