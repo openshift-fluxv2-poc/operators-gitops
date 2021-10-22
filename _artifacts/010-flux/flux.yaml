@@ -20,4 +20,4 @@ spec:
   name: flux
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: flux.v0.18.3
+  startingCSV: flux.v0.19.1
